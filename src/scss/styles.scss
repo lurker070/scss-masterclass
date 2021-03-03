@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Caladea:400&display=swap");
+@import "_variables.scss";
+@import "_title.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+    padding-top: 70px;
+    font-family: "Caladea";
+}
+
+body > *:not(.footer,.head_blog){
+    padding: 0px 140px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    @extend %minititle;
+}
+
+header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+    padding: 0px 140px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul{
+            display: flex;
+            text-transform: uppercase;
+            @extend %minititle;
+            font-size: 8px;
+            font-weight: 600;
+            li{
+                margin-right: 40px;
+            }            
+        }
+    }
+}
+
+.head_blog{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 80px;
+    .head_header{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg;
+        .wrapper{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 50px;
+                font-weight: 200;
+            }
+            a{
+                @extend %minititle;
+                border: 1px solid black;
+                width: 50%;
+                padding: 20px 0px;
+                text-align:center;
+                transition: color 0.3s linear, background 0.3s linear;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+    img,div{
+        width:50%;
+    }
+}
+
+
+.crop{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 80px;
+    .crop_wrapper{
+        width: 100%;
+        background-color: $bg2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .crop_head{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                @extend %minititle;
+                margin-bottom: 30px;
+                font-weight: 600;
+            }
+            h1{
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 70px;
+                font-weight: 200;
+            }
+            a{
+                @extend %minititle;
+                border: 1px solid black;
+                width: 50%;
+                padding: 20px 0px;
+                text-align:center;
+                transition: color 0.3s linear, background 0.3s linear;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }  
+        }
+    }
+    img,div{
+        width: 50%;
+    }
+}
+
+.shop{
+    .shop_head{
+        text-align: center;
+        h2{
+            @extend %minititle;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        h1{
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 70px;
+            font-weight: 200;
+        }
+    }
+    .nail_product{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 80vh;
+        .nail_pic{
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            img{
+                width: 100%;
+                height: 100%;
+                align-self: start;
+            }
+            
+        }
+    }
+}
+
+.crop_mid{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 80px;
+    .wrapper_mid{
+        width: 100%;
+        background-color: $bg3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .crop_head_mid{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                @extend %minititle;
+                margin-bottom: 30px;
+                font-weight: 600;
+            }
+            h1{
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 70px;
+                font-weight: 200;
+            }
+            a{
+                @extend %minititle;
+                border: 1px solid black;
+                width: 50%;
+                padding: 20px 0px;
+                text-align:center;
+                transition: color 0.3s linear, background 0.3s linear;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }  
+        }
+    }
+    img,div{
+        width: 50%;
+    }
+}
+
+.explain{
+    .explain_top{
+        text-align: center;
+        h2{
+            @extend %minititle;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        h1{
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 70px;
+            font-weight: 200;
+        }
+    }
+    .nail_row{
+        display:grid;
+        grid-template-columns: repeat(6, 20vh);
+        justify-content: center;
+        align-content: center;
+        .nail{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            h3{
+                @extend %minititle;
+                opacity: 0.5;
+                text-align: center;
+            }
+        }
+    }
+}
